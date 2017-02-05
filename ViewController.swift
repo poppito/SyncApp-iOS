@@ -12,8 +12,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: outlets
     
-    @IBOutlet weak var textBox: UITextField!
-    
+    @IBOutlet weak var textBox: UITextField!    
     
     var currentTextState = false
 
@@ -27,6 +26,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "oneToTwo" {
+            textBox.text = "bye"
+        }
     }
     
     //MARK: actions

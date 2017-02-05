@@ -28,19 +28,28 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcB-RM-oen">
-                                <rect key="frame" x="121" y="369" width="79" height="30"/>
+                                <rect key="frame" x="121" y="249" width="79" height="30"/>
                                 <state key="normal" title="Press this?!"/>
                                 <connections>
                                     <action selector="pressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fU7-7d-S5d"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lag-BU-WWc">
+                                <rect key="frame" x="121" y="309" width="79" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="J6G-NL-1fG" kind="show" identifier="oneToTwo" id="vcL-qb-QpU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="lcB-RM-oen" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="1uG-xb-hM4"/>
+                            <constraint firstItem="lcB-RM-oen" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-20" id="1uG-xb-hM4"/>
                             <constraint firstItem="lcB-RM-oen" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6sY-5H-s5R"/>
+                            <constraint firstItem="lag-BU-WWc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EDO-rY-3iU"/>
                             <constraint firstItem="45W-nS-8eh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="EsY-UR-cyH"/>
                             <constraint firstItem="45W-nS-8eh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G1B-nk-Fvf"/>
+                            <constraint firstItem="lag-BU-WWc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vbs-2T-INj"/>
                         </constraints>
                     </view>
                     <connections>
@@ -51,22 +60,53 @@
             </objects>
             <point key="canvasLocation" x="135" y="111.97183098591549"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="AIX-li-aIp">
+        <!--Second Scene View Controller-->
+        <scene sceneID="cqw-an-PXD">
             <objects>
-                <viewController id="ATD-sS-GUJ" sceneMemberID="viewController">
+                <viewController id="J6G-NL-1fG" customClass="SecondSceneViewController" customModule="Syncapp_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="muR-2y-sXm"/>
-                        <viewControllerLayoutGuide type="bottom" id="NAt-Ru-dMv"/>
+                        <viewControllerLayoutGuide type="top" id="XMp-OK-Q3g"/>
+                        <viewControllerLayoutGuide type="bottom" id="ID9-l6-fZ7"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vaF-1G-U5G">
+                    <view key="view" contentMode="scaleToFill" id="Mkc-yp-vP5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text goes here eh" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsh-i3-PVN">
+                                <rect key="frame" x="89" y="53" width="136.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLB-Yq-Ezo">
+                                <rect key="frame" x="118" y="210" width="79" height="30"/>
+                                <state key="normal" title="Press this?!"/>
+                                <connections>
+                                    <action selector="pressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ukl-iQ-RIb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXN-3e-LLj">
+                                <rect key="frame" x="121" y="300" width="79" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="twoToOne" id="Vvz-iM-edl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rsh-i3-PVN" firstAttribute="centerY" secondItem="Mkc-yp-vP5" secondAttribute="centerY" constant="-100" id="Nvr-bU-d6q"/>
+                            <constraint firstItem="QLB-Yq-Ezo" firstAttribute="centerY" secondItem="Mkc-yp-vP5" secondAttribute="centerY" constant="-20" id="hnj-eC-nay"/>
+                            <constraint firstItem="rsh-i3-PVN" firstAttribute="centerX" secondItem="Mkc-yp-vP5" secondAttribute="centerX" id="jvw-YJ-mag"/>
+                            <constraint firstItem="QLB-Yq-Ezo" firstAttribute="centerX" secondItem="Mkc-yp-vP5" secondAttribute="centerX" id="ko9-Nh-0JH"/>
+                            <constraint firstItem="YXN-3e-LLj" firstAttribute="centerX" secondItem="Mkc-yp-vP5" secondAttribute="centerX" id="un2-6e-SQl"/>
+                            <constraint firstItem="YXN-3e-LLj" firstAttribute="centerY" secondItem="Mkc-yp-vP5" secondAttribute="centerY" constant="20" id="yeE-R1-Rg0"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l08-JI-SUT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rKn-AR-8LG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="990" y="112"/>
         </scene>
     </scenes>
 </document>
