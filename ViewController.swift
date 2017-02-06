@@ -32,9 +32,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: actions
     @IBAction func onNameClicked(_ sender: Any) {
-        
+        contactNameButton.setTitle("Goodbye", for: .normal)
     }
-    
 
 
 }

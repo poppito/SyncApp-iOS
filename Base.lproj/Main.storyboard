@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pC-fc-suE">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pC-fc-suE">
                                 <rect key="frame" x="146" y="68" width="46" height="30"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="0.42105863093871509" blue="0.33607041387922432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -29,14 +29,15 @@
                                 </state>
                                 <connections>
                                     <action selector="onNameClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1c3-DJ-qRk"/>
+                                    <segue destination="J6G-NL-1fG" kind="showDetail" id="Mat-3t-ZVn"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.76516761145029522" blue="0.99579522513748797" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.91683723220597324" green="0.67195248130996066" blue="1" alpha="0.85654159330985913" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3pC-fc-suE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="146" id="O0g-tI-4P1"/>
-                            <constraint firstItem="3pC-fc-suE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="fF8-fA-Ter"/>
+                            <constraint firstItem="3pC-fc-suE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7yV-zG-fDb"/>
+                            <constraint firstItem="3pC-fc-suE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TF7-tZ-fra"/>
                         </constraints>
                     </view>
                     <connections>
