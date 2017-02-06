@@ -12,15 +12,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: outlets
     
-    @IBOutlet weak var textBox: UITextField!    
+    @IBOutlet weak var contactNameButton: UIButton!
     
-    var currentTextState = false
-
+    var contactName: String? = "Numpy Gleeson"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        textBox.delegate = self
-        
+        if contactName != nil {
+                    contactNameButton.setTitle(contactName, for: .normal)
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,28 +29,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "oneToTwo" {
-            textBox.text = "bye"
-        }
-    }
     
     //MARK: actions
-    
-    @IBAction func textFieldDidEndEditing(_ textField: UITextField) {
-        textField.resignFirstResponder()
+    @IBAction func onNameClicked(_ sender: Any) {
+        
     }
     
-    @IBAction func pressButton(_ sender: UIButton) {
-        if (currentTextState) {
-            textBox.text = "hello"
-            currentTextState = false
-        }
-        else {
-            textBox.text = "world"
-            currentTextState = true
-        }
-    }
+
 
 }
 
